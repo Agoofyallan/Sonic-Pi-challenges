@@ -1,6 +1,7 @@
 use_bpm 124
-
-
+use_synth :dsaw
+singer ="C:/Users/Allan_Arriaga/Downloads/Pixies (1).mp3"
+use_bpm 124
 live_loop :pro do
   use_synth :dsaw
   play :d4
@@ -61,6 +62,9 @@ live_loop :pro do
   sleep 1
 end
 sleep 15
+sample singer, amp:4
+
+sleep 15
 live_loop :drums do
   sample :drum_bass_hard
   sleep 1
@@ -70,8 +74,16 @@ live_loop :bass do
   sample :bass_hit_c, amp:5
   sleep 4
 end
+
+
+sleep 15
+live_loop :drums do
+  sample :drum_bass_hard
+  sleep 1
+end
+
 sleep 16
-live_loop :extra do
-  sample :guit_e_fifths
-  sleep 5
+live_loop :bass do
+  sample :bass_hit_c ,amp:5
+  sleep 4
 end
